@@ -1,0 +1,36 @@
+.container-fluid
+	.row
+		.col-sm-4
+			img ng-src="/assets/phones/{{mainImageUrl}}"
+		.col-sm-8
+			.row
+				.col-sm-12
+					h1
+						| {{phone.name}}
+					p
+						| {{phone.display}}
+			.row
+				.col-sm-2 ng-repeat="img in phone.phone_images"
+					img.img-responsive ng-src="/assets/phones/{{img.url}}" ng-click="setImage(img.url)"
+	.row
+		.col-sm-3
+			h4 Availability
+			p
+				| {{phone.availability}}
+		.col-sm-3
+			h4 Battery
+			p
+				| {{phone.battery}}
+		.col-sm-3
+			h4 Camera
+			p
+				| {{phone.camera}}
+		.col-sm-3
+			h4 Connectivity
+			p
+				| {{phone.connectivity}}
+	.row
+		.col-sm-3
+			h4 GPS
+			p
+				| {{phone.gps | checkmark}}

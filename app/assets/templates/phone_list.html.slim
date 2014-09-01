@@ -1,0 +1,23 @@
+.container-fluid
+  .row
+    .col-md-3
+      form.form-horizontal
+        .form-group
+          label.col-sm-4.control-label Search By
+          .col-sm-8
+            input.form-control ng-model="query" placeholder="query"
+        .form-group
+          label.col-sm-4.control-label Sort By
+          .col-sm-8
+            select.form-control ng-model="orderProp"
+              option value="name" Alphabetical
+              option value="age" Newest
+    .col-md-9
+      .row.phones ng-repeat="phone in phones | filter:query | orderBy:orderProp"
+        .col-xs-6.col-sm-2
+          a.thumbnail href="#/phones/{{phone.id}}"
+            img ng-src="/assets/phones/{{phone.phone_images[0].url}}"
+        .col-xs-6.col-sm-10
+          a href="#/phones/{{phone.id}}" {{phone.name}}
+          p
+            | {{phone.display}}
