@@ -13,7 +13,7 @@
               option value="name" Alphabetical
               option value="age" Newest
     .col-md-9
-      .row.phones ng-repeat="phone in phones | filter:query | orderBy:orderProp"
+      .row.phones.phone-listing ng-repeat="phone in phones | filter:query | orderBy:orderProp"
         .col-xs-6.col-sm-2
           a.thumbnail href="#/phones/{{phone.id}}"
             img ng-src="/assets/phones/{{phone.phone_images[0].url}}"

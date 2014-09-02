@@ -2,7 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-phonecatApp = angular.module("phonecatApp", ['ngRoute', 'phonecatControllers', 'templates', 'phonecatFilters', 'phonecatServices'])
+phonecatApp = angular.module("phonecatApp", ['ngRoute', 'phonecatControllers',
+ 'templates', 'phonecatFilters', 'phonecatServices', 'phonecatAnimations'])
 
 phonecatApp.config [
 	'$routeProvider',	($routeProvider) ->

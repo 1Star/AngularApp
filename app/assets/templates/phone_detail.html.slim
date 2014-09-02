@@ -1,7 +1,7 @@
 .container-fluid
 	.row
-		.col-sm-4
-			img ng-src="/assets/phones/{{mainImageUrl}}"
+		.col-sm-4.phone-images
+			img ng-repeat="img in phone.phone_images" ng-src="/assets/phones/{{img.url}}"  class="phone" ng-class="{active:mainImageUrl==img.url}"
 		.col-sm-8
 			.row
 				.col-sm-12
@@ -11,7 +11,7 @@
 						| {{phone.display}}
 			.row
 				.col-sm-2 ng-repeat="img in phone.phone_images"
-					img.img-responsive ng-src="/assets/phones/{{img.url}}" ng-click="setImage(img.url)"
+					img.img-responsive ng-src="/assets/phones/{{img.url}}" ng-mouseenter="setImage(img.url)"
 	.row
 		.col-sm-3
 			h4 Availability

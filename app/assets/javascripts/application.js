@@ -18,6 +18,7 @@
 //= require angular
 //= require angular-route
 //= require angular-resource
+//= require angular-animate
 
 //= require angular-rails-templates
 //= require_tree ../templates
@@ -26,3 +27,4 @@
 //= require controllers
 //= require filters
 //= require services
+//= require animation
